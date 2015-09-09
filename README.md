@@ -1,10 +1,11 @@
 # MultiServer
 This is an project to create all kinds of servers (Email, Web, DNS, ...) to replace the old and famous projects (Apache, Bind, Postfix, ...).
+
 Why? Did you ever try to run your own web server or mail server? After hours or even days of googling around you still don't get it to work?
 Stackoverflow tells you to throw another bunch of config options into obscure files and that makes it even worse.
 
 MultiServer is better because:
- - is easier to deploy, maintain, extent
+ - is easier to deploy, maintain, extend
  - it shares code for all servers
  - has a common configuration language (YAML)
  - it follows convention over configuration
@@ -28,14 +29,11 @@ TODO: What should my mother do?
 # Configuration
 All configurations are located at `/etc/servers/`
 
-
-# What's not (yet) on the list
-- Mysql/PostgreSQL
-- Redis
-- Syslog
-- Gitlab
-- SSH
-- Samba
+# Project Goals
+In this order:
+- Easy & Simple
+- Fast
+- RFC-Complient
 
 # Task List
 - [ ] The startup process. Every server should register as an systemd/init/... server.
@@ -44,7 +42,7 @@ All configurations are located at `/etc/servers/`
 - [ ] make a fancy logo & web-page to introduce this idea
 - [ ] should there be a web-interface to configure everything?
 - [ ] what about an API?
-- [ ] (optionally) run the servers inside docker containers?
+- [ ] run the servers (optionally) inside docker containers?
 - [ ] required/basic set of servers
   - [ ] DNS
   - [ ] Email (SMTP & IMAP)
@@ -52,4 +50,12 @@ All configurations are located at `/etc/servers/`
 - [ ] Other optional servers
   - [ ] VPN
   - [ ] Email mailing list manager
-  - [ ] (Reverse-) Proxy
+  - [ ] Proxy / Reverse-Proxy
+
+# What's not (yet) on the list
+  - Mysql/PostgreSQL
+  - Redis
+  - Syslog
+  - Gitlab
+  - SSH
+  - Samba

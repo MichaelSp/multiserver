@@ -2,9 +2,7 @@
 # startup scripts for your startup system and sarts the services
 #
 
-require "servers"
+require "cli"
 
-MultiServer::Servers.enabled.each do |server|
-  server.write_startup_script
-  MultiServer::Monitor.add server
-end
+cli = Cli.new ARGV
+cli.run

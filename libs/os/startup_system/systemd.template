@@ -1,0 +1,14 @@
+[Unit]
+Description=#{description}
+After=network.target
+
+[Service]
+EnvironmentFile=-/etc/default/#{server_name}
+ExecStart=server run #{server_name}
+ExecReload=server reload #{server_name}
+KillMode=process
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+Alias=#{server_name}.service
